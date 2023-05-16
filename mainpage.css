@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600&family=Space+Grotesk:wght@300;400;600;700&display=swap');
+ *,*::before,*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+ }
+ /*Enkela*/
+body{
+    font-family: 'Schibsted Grotesk', sans-serif;
+    background: #000;
+    color:#fff;
+  }
+  a{
+    text-decoration:none;
+    color:#fff;
+  }
+  ul{
+    list-style:none;
+  }
+  .main-header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:3;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    text-transform: uppercase;
+    height:100px;
+    padding:0 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .logo{
+   width: 150px;
+   height:auto;
+
+  }
+  .logo img{
+    display:block;
+    width:100%;
+    height: auto;
+
+  }
+  .desktop-main-menu{
+    margin:50px;
+
+  }
+  .desktop-main-menu ul{
+    display:flex;
+  }
+  .desktop-main-menu ul li{
+    position:relative;
+    margin-right:20px;
+    padding-bottom:2px;
+  }
+  .desktop-main-menu ul li a::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:1px;
+    background:#fff;
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.19,1,0.22,1);
+    transform-origin: right center;
+
+  }
+  .desktop-main-menu ul li a:hover::after{
+    transform:scaleX(1);
+    transform-origin:left center;
+    transition-duration:0.4s;
+  }
+  .section-a{
+    height:100vh;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size: cover;
+  }
+  .section-inner-a{
+    position:absolute;
+    bottom:200px;
+    max-width:560px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-left: 2%;
+  }
+  .section-inner-a h4{
+    font-size:22px;
+    margin-bottom:5px;
+    font-weight:300;
+    animation: fadeInUp 0.5s ease-in-out;
+    animation-fill-mode:both;
+  }
+  .section-inner-a h2{
+font-size:50px;
+font-weight:700;
+margin-bottom:20px;
+animation: fadeInUp 0.5s ease-in-out 0.2s;
+
+  }
+  
+  .section-a{
+    background-image: url(mainbackgr.jpg);
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .section-inner-a a{
+    animation: fadeInUp 0.5s ease-in-out 0.4s;
+  }
+  /*Button*/
+  .btn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    min-width: 130px;
+    padding: 15px 50px;
+    margin-top: 10px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 2;
+  }  
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: transparent;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .btn:hover span {
+    color: #000;
+  }
+  .btn:hover::before {
+    transform: translateY(0);
+  }
+
+ /*Marija*/
+ .section-c {
+  background-color: #000;
+  height: 800px;
+  width: 100%;
+ }
+
+ /*Dividing divs*/
+ .section-c {
+  display: flex;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.first {
+  flex: 1;
+}
+.secound {
+  flex: 1;
+}
+/*Adjusting content inside*/
+.first{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.first img {
+max-width: 100%;
+max-height: 100%;
+image-rendering: auto;
+}
+.secound {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+text-align: center;
+}
+.secound{
+font-size: 16px;
+}
+.secound h1{
+font-size: 50px;
+}
+
+ /*Number part*/
+ @property --num {
+  syntax: '<integer>';
+  initial-value: 0;
+  inherits: false;
+}
+.secound {
+  transition: --num 3s;
+  counter-reset: num var(--num);
+}
+.secound:hover {
+  --num: 100;
+}
+.secound::after {
+  content: counter(num);
+}
+.secound::after {
+  content: counter(num);
+  font-size: 50px;
+}
+ /*Scroll section */
+ .scroll-sec {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.scroll-cont {
+  display: flex;
+  width: 100%;
+}
+/*First page*/
+.page {
+  flex: 0 0 50%;
+  display: inline-block;
+  width: 100%;
+  scroll-snap-align: start;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.secound2{
+  flex: 1;
+  padding: 60px;
+  font-size: 15px;
+  text-align: center;
+}
+h1{
+  font-size: 35px;
+}
+
+/*Secound page*/
+.page2 {
+  scroll-snap-align: start;
+  margin-right: none;
+  margin-left: 10%;
+}
+.explain{
+  display: block;
+  align-items: flex-start;
+  display: inline-flex;
+}
+.explain div{
+  margin: 40px 100px 10px 100px;
+}
+/*Third Page*/
+      
