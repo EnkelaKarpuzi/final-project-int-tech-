@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600&family=Space+Grotesk:wght@300;400;600;700&display=swap');
+body{
+    background-image:url(backgrounreview.jpg);
+    background-color: black;
+    color:#fff;
+    font-family:'Schibsted Grotesk', sans-serif;
+}
+.review img{
+    width:400px;
+    height:400px;
+    object-fit:contain;
+   align-items:center;
+}
+p{
+    text-align: center;
+}
+h3{
+    text-align: center;
+    text-transform: uppercase;
+}
+h4{
+    text-align: center;
+    text-transform: uppercase;
+    margin-left: 2em;
+    margin-right:2em;
+    padding: 2em;
+}
+h1{
+    margin:2em;
+    text-transform: uppercase;
+    text-align: center;
+}
+p{
+    margin-left: 2em;
+    margin-right:2em;
+}
+.logo{
+    width: 150px;
+    height:auto;
+ }
+.logo img{
+display:block;
+width:100%;
+height: auto;
+}
+
+.main-header{
+position:relative;
+top:0;
+left:0;
+width:100%;
+display: flex;
+justify-content:space-between;
+align-items:center;
+text-transform: uppercase;
+height:100px;
+
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+
+.desktop-main-menu ul{
+display:flex;
+margin-left:1em; }
+      
+.desktop-main-menu ul li{
+position:relative;
+margin-right:20px;
+ padding-bottom:2px; }
+
+ .desktop-main-menu ul{
+list-style: none; }
+
+footer{
+    position: relative;
+    padding:55px;
+  }
+  footer ul{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap:wrap;
+  }
+  footer ul li{
+  margin-right: 30px;
+  color:#aaa;
+  text-transform:uppercase;
+  font-size:13px;
+  line-height:2.5;
+  }
+  footer ul li a {
+    color:#fff;
+    transition:color 0,6s;
+  }
+  footer ul li a:hover{
+    color:#aaa;
+  }
+  .review {
+    display: flex;
+    align-items: center;
+  }
+
+  .review img {
+    margin-right: 10px;
+    padding-left:50px;
+    padding-right:50px;
+    margin-left:1em;
+    margin-right:1em;
+  }
+  .custom-border {
+    border: 2px solid #430958; 
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+  }
